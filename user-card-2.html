@@ -14,7 +14,7 @@
         <div class="card-wrapper">
             <div class="card profile-two">
                 <div class="card-image profile-img--two">
-                    <img src="https://image.ibb.co/c9rY6J/profile02.jpg" alt="profile two">
+                    <img id="personImage" src="https://image.ibb.co/c9rY6J/profile02.jpg" alt="profile two">
                 </div>
 
                 <ul class="social-icons">
@@ -56,12 +56,15 @@
         function toggle(){
             // alert("Toggle clicked");
             var personNameElement = document.getElementById("personName");
+            var personImageElement = document.getElementById("personImage");
             var personName = personNameElement.innerHTML;
             if(personName === "Jane Doe"){
-                document.getElementById("personName").innerHTML = "Jon Doe";
+                personNameElement.innerHTML = "Jon Doe";
+                personImageElement.src = "https://image.ibb.co/dUTfmJ/profile_img.jpg";
             }
             else{
-                document.getElementById("personName").innerHTML = "Jane Doe";
+                personNameElement.innerHTML = "Jane Doe";
+                personImageElement.src = "https://image.ibb.co/c9rY6J/profile02.jpg";
             }
         }
     </script>
