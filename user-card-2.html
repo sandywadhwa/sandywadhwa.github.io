@@ -49,12 +49,20 @@
                 </div>
             </div>
         </div><!-- END box wrapper -->
-        <button onclick="toggle()">Toggle</button>
     </div><!-- END container -->
+    <button onclick="toggle()">Toggle</button>
     <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
     <script>
         function toggle(){
-            alert("Toggle clicked");
+            // alert("Toggle clicked");
+            var personNameElement = document.getElementById("personName");
+            var personName = personNameElement.innerHTML;
+            if(personName === "Jane Doe"){
+                document.getElementById("personName").innerHTML = "Jon Doe";
+            }
+            else{
+                document.getElementById("personName").innerHTML = "Jane Doe";
+            }
         }
     </script>
 </body>
